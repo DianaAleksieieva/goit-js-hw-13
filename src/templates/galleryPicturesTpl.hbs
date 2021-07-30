@@ -1,0 +1,22 @@
+{{#each this}}
+<div class="photo-card">
+       <div class="image-tube">
+       <img src="{{this.webformatURL}}" alt="{{this.tags}}" class='images' loading="lazy" />
+       </div>
+       <div class="info">
+              <p class="info-item">
+                     <b class="info-title">Likes <span class='info-result'>{{likes}}</span></b>
+              </p>
+              <p class="info-item">
+                     <b class="info-title">Views<spa class='info-result'>{{views}}</span></b>
+              </p>
+              <p class="info-item">
+                     <b class="info-title">Comments<span class='info-result'>{{comments}}</span></b>
+              </p>
+              <p class="info-item">
+                     <b class="info-title">Downloads<span class='info-result'>{{downloads}}</span></b>
+              </p>
+       </div>
+</div>
+
+{{/each}}
