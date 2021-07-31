@@ -1,4 +1,4 @@
-const searchElement = document.querySelector(".search-imput");
+const searchElement = document.querySelector(".search-input");
 const searchButton = document.querySelector(".search-button");
 const searchForm = document.querySelector(".search-form");
 const pictureCard = document.querySelector(".gallery");

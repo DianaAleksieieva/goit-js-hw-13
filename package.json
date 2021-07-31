@@ -30,6 +30,8 @@
     "debounce": "^1.2.1",
     "handlebars": "^4.7.7",
     "notiflix": "^3.0.1",
-    "spinner": "^0.3.4"
+    "simplelightbox": "^2.8.0",
+    "spinner": "^0.3.4",
+    "st-font-awesome": "^2.0.0-beta.2"
   }
 }

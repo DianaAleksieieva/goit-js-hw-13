@@ -13,11 +13,16 @@ export default class ApiGallery {
       const response = await axios.get(`${BASE_URL}${KEY}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&page=${this.page}&per_page=40`);
       const data = response.data
       this.page += 1;
+      if (data.hits.length === 0) {
+        Notify.failure('Nothing found');
+      }else {
+       Notify.success("Hooray! We found totalHits images.");;
+    }
+    
     return data.hits
     }
     catch (error) { 
       Notify.failure("We're sorry, but you've reached the end of search results.");
-      console.log(error.message)
     };
   }
 

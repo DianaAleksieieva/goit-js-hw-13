@@ -13,6 +13,11 @@ const loadMoreBtn = new LoadMoreBtn({
 searchButton.addEventListener('click', onSearch)
 loadMoreBtn.refs.button.addEventListener('click', onLoadMore);
 
+function appendPictures(pictures) {
+    pictureCard.insertAdjacentHTML('beforeend', galleryPicturesTpl(pictures))
+    loadMoreBtn.enable();
+    return pictures
+}
 
 
 function onSearch(e) {
@@ -20,21 +25,17 @@ function onSearch(e) {
     e.preventDefault();
     clearPicturesContainer();
     apiGallery.query = searchElement.value;
-      if (apiGallery.query === '') {
-       Notify.failure('Type search parameters...');
-      }
-      else if (apiGallery.fetchPictures.length === 0) {
-           console.log(apiGallery)
-        Notify.failure('Nothing found');
-      }
-      else {
-       Notify.success("Hooray! We found totalHits images.");;
+    apiGallery.resetPage();
+    if (apiGallery.query === '') {
+        Notify.failure('Type search parameters...');
+        return
     }
     loadMoreBtn.show();
     loadMoreBtn.disable();
-    apiGallery.resetPage();
     apiGallery.fetchPictures()
-        .then(appendPictures)};
+        .then(appendPictures);
+};
+        
 function onLoadMore(e) {
     loadMoreBtn.disable();
     e.preventDefault();
@@ -43,11 +44,8 @@ function onLoadMore(e) {
     loadMoreBtn.abable();
     
 }
-function appendPictures(pictures) {
-    pictureCard.insertAdjacentHTML('beforeend', galleryPicturesTpl(pictures))
-    loadMoreBtn.enable();
 
-}
 function clearPicturesContainer() {
     pictureCard.innerHTML ='';
 }
+
