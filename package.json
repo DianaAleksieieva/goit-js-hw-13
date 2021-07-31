@@ -6,7 +6,7 @@
   "homepage": "https://DianaAleksieieva.github.io/goit-js-hw-13.git",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-13.git/"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "axios": "^0.21.1",
     "debounce": "^1.2.1",
     "handlebars": "^4.7.7",
+    "json-server": "^0.16.3",
     "notiflix": "^3.0.1",
     "simplelightbox": "^2.8.0",
     "spinner": "^0.3.4",
