@@ -79,4 +79,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"./ferch-info":"PbA6","../templates/galleryPicturesTpl.hbs":"woiN","./get-elements":"tUyk","notiflix":"xeAG","./load-more-btn":"vMqs"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/build-gallery.js"),require("./js/ferch-info.js");
 },{"./sass/main.scss":"clu1","./js/build-gallery.js":"tvYc","./js/ferch-info.js":"PbA6"}]},{},["Focm"], null)
-//# sourceMappingURL=/parcel-project-template/src.a38c0899.js.map
+//# sourceMappingURL=/goit-js-hw-13.git/src.a38c0899.js.map
