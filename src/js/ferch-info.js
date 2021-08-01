@@ -1,5 +1,10 @@
-import { Notify} from "notiflix";
+import { Notify } from "notiflix";
+import LoadMoreBtn from "./load-more-btn";
 const axios = require('axios').default;
+const loadMoreBtn = new LoadMoreBtn({
+    selector: '[data-action="load-more"]',
+    hidden: true
+});
 export default class ApiGallery {
     constructor() {
         this.searchQuery = '';
@@ -15,8 +20,10 @@ export default class ApiGallery {
       this.page += 1;
       if (data.hits.length === 0) {
         Notify.failure('Nothing found');
-      }else {
-       Notify.success("Hooray! We found totalHits images.");;
+        loadMoreBtn.hide();
+      } else {
+        const successMessanger = `Hooray! We found ${response.data.totalHits} images.`
+       Notify.success(successMessanger);
     }
     
     return data.hits

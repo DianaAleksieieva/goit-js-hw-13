@@ -30,10 +30,10 @@ function onSearch(e) {
         Notify.failure('Type search parameters...');
         return
     }
-    loadMoreBtn.show();
-    loadMoreBtn.disable();
-    apiGallery.fetchPictures()
+   apiGallery.fetchPictures()
         .then(appendPictures);
+     loadMoreBtn.show();
+    loadMoreBtn.disable();
 };
         
 function onLoadMore(e) {
